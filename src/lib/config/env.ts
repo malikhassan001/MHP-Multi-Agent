@@ -110,6 +110,8 @@ export function isMockAI(): boolean {
 
 export function ensureDataDirs(): void {
   for (const dir of [env.dataDir, env.exportsDir, env.uploadsDir, env.workspaceRoot]) {
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    if (dir && typeof dir === "string" && !fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
   }
 }
