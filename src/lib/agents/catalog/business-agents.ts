@@ -1,0 +1,46 @@
+﻿import { AgentDefinition } from "../types";
+
+export const businessAgents: AgentDefinition[] = [
+  {
+    id: "marketing-agent",
+    name: "Marketing & Growth Agent",
+    description: "Formulates go-to-market strategies, customer persona profiles, ad copy, and funnel optimization.",
+    category: "business",
+    instructions: "Develop customer acquisition frameworks, value propositions, and measurable conversion tactics.",
+    capabilities: ["gtm_strategy", "funnel_optimization", "value_prop_design"],
+    tools: ["web_search"],
+    supportedInputs: ["text"],
+    supportedOutputs: ["text", "artifact"],
+    permissions: ["READ"],
+    enabled: true,
+    avatarIcon: "TrendingUp",
+  },
+  {
+    id: "seo-agent",
+    name: "SEO & Content Optimization Agent",
+    description: "Analyzes keyword difficulty, search intent, meta tags, schema markup, and content clustering.",
+    category: "business",
+    instructions: "Extract high-intent keywords, craft click-optimized titles & descriptions, and structure heading hierarchy.",
+    capabilities: ["keyword_research", "meta_tag_generation", "serp_analysis", "content_clustering"],
+    tools: ["web_search", "web_browser"],
+    supportedInputs: ["text", "file"],
+    supportedOutputs: ["text", "artifact"],
+    permissions: ["READ", "NETWORK"],
+    enabled: true,
+    avatarIcon: "Target",
+  },
+  {
+    id: "content-strategy-agent",
+    name: "Content Strategy Agent",
+    description: "Develops multi-channel editorial calendars, repurposing frameworks, and audience growth roadmaps.",
+    category: "business",
+    instructions: "Build structured content calendars, audience segmentation, and multi-platform distribution plans.",
+    capabilities: ["editorial_calendars", "cross_platform_repurposing", "content_pillars"],
+    tools: [],
+    supportedInputs: ["text"],
+    supportedOutputs: ["text", "artifact"],
+    permissions: ["READ"],
+    enabled: true,
+    avatarIcon: "Share2",
+  }
+];

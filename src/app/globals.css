@@ -1,0 +1,62 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #080C14;
+  --bg-surface: #0D1322;
+  --bg-card: #121A2D;
+  --border-glow: #1E2A44;
+  --neon-blue: #0066FF;
+  --neon-cyan: #00D2FF;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: #E2E8F0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(13, 19, 34, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2A44;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0066FF;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(13, 19, 34, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 42, 68, 0.7);
+}
+
+.glass-card {
+  background: rgba(18, 26, 45, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 42, 68, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 210, 255, 0.4);
+}
+
+.glow-text-cyan {
+  text-shadow: 0 0 12px rgba(0, 210, 255, 0.5);
+}
+
+.glow-border-blue {
+  box-shadow: 0 0 15px rgba(0, 102, 255, 0.35);
+}

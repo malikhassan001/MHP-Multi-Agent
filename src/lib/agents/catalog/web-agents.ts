@@ -1,0 +1,46 @@
+﻿import { AgentDefinition } from "../types";
+
+export const webAgents: AgentDefinition[] = [
+  {
+    id: "web-research-agent",
+    name: "Web Research Agent",
+    description: "Autonomously searches the live web, queries multiple search engines, and extracts real-time intelligence.",
+    category: "web",
+    instructions: "Formulate effective search queries, parse search snippets, explore authoritative domains, and verify claims.",
+    capabilities: ["web_search", "domain_lookup", "live_data_retrieval", "competitive_intel"],
+    tools: ["web_search", "web_browser"],
+    supportedInputs: ["text"],
+    supportedOutputs: ["text", "artifact"],
+    permissions: ["READ", "NETWORK"],
+    enabled: true,
+    avatarIcon: "Compass",
+  },
+  {
+    id: "browser-agent",
+    name: "Browser Agent",
+    description: "Fetches live webpages, extracts readable DOM content, strips ads, and parses structured articles.",
+    category: "web",
+    instructions: "Retrieve URL content safely, clean markdown text, and extract metadata, open graph tags, and links.",
+    capabilities: ["page_fetching", "dom_extraction", "article_parsing"],
+    tools: ["web_browser"],
+    supportedInputs: ["text"],
+    supportedOutputs: ["text", "artifact"],
+    permissions: ["READ", "NETWORK", "BROWSER"],
+    enabled: true,
+    avatarIcon: "Globe",
+  },
+  {
+    id: "website-analyzer",
+    name: "Website Analyzer Agent",
+    description: "Evaluates websites for performance, accessibility, SEO metadata, responsive design, and tech stack.",
+    category: "web",
+    instructions: "Analyze target web URLs or code for Lighthouse metrics, responsive layout, meta tags, and security headers.",
+    capabilities: ["seo_audit", "accessibility_audit", "tech_stack_detection"],
+    tools: ["web_browser"],
+    supportedInputs: ["text", "code"],
+    supportedOutputs: ["text", "artifact"],
+    permissions: ["READ", "NETWORK"],
+    enabled: true,
+    avatarIcon: "BarChart3",
+  }
+];
