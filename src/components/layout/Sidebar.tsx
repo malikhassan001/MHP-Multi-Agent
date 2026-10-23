@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import {
   MessageSquarePlus,
   Search,
@@ -15,6 +16,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Clapperboard,
+  Waves,
 } from "lucide-react";
 
 export type NavView =
@@ -45,10 +47,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
   isCollapsed,
   onToggleCollapse,
 }) => {
+  const router = useRouter();
   const navItems = [
     { id: "chat", label: "Chats", icon: MessageSquarePlus, action: () => onSelectView("chat") },
     { id: "workspace", label: "Coding IDE", icon: Code2, action: () => onSelectView("workspace") },
     { id: "video", label: "Video Studio", icon: Clapperboard, action: () => onSelectView("video") },
+    { id: "flow", label: "Flow Voice-to-Video", icon: Waves, action: () => router.push("/flow") },
     { id: "agents", label: "Agents Library", icon: Users2, action: () => onSelectView("agents") },
     { id: "projects", label: "Projects", icon: FolderGit2, action: () => onSelectView("projects") },
     { id: "tasks", label: "Task Monitor", icon: CheckSquare2, action: () => onSelectView("tasks") },
